@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: 'fastfeet-postgres'
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: fastfeet
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+
+  redis:
+    container_name: 'fastfeet-redis'
+    image: redis:alpine
+    ports:
+      - "6379:6379"
